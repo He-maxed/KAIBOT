@@ -8,7 +8,7 @@ from database.coin_db import get_balance, change_balance
 
 SHOP_DATA_FILE = 'database/shop_items.json'
 TICKETS_FILE = 'database/shop_tickets.json'
-TICKETS_CHANNEL_ID = 1401171603613548614  # Set your dedicated channel ID here
+TICKETS_CHANNEL_ID = os.getenv("TICKETS_CHANNEL_ID")  # Set your dedicated channel ID here
 
 # Ensure data files exist
 for file in [SHOP_DATA_FILE, TICKETS_FILE]:
