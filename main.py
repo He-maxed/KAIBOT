@@ -52,10 +52,10 @@ async def setup_hook():
         "commands.leaderboard",
         "commands.shop_system",
         "features.auction.auction_managercommands",
-        "features.trivia_and_Interesting.trivia",
+        #"features.trivia.trivia",
         "commands.cointoss",
         "features.upvote.upvote_tracker",
-        "features.trivia_and_Interesting.interestingquestions",
+        "features.trivia.chatstarter",
     ]
     
     for ext in extensions:

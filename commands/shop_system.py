@@ -158,13 +158,13 @@ class Shop(commands.Cog):
         save_data(SHOP_DATA_FILE, shop_data)
 
         embed = discord.Embed(
-            title=f"🛍️ {title}",
-            description=description,
+            title=f"\n",
+            description=f"# **🛍️ {title}**",
             color=discord.Color.gold()
         )
-        embed.add_field(name="Price", value=f"{price} smiles")
+        embed.add_field(name="**Price**", value=f"**{price} smiles**")
         if role_id:
-            embed.add_field(name="Role", value=f"<@&{role_id}>")
+            embed.add_field(name="**Role**", value=f"<@&{role_id}>")
         if image:
             embed.set_image(url=image.url)
 

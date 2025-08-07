@@ -142,12 +142,16 @@ async def get_bidder_mention(bot, bidder_id):
 
 async def build_auction_embed(auction, bot):
     # Create the main embed
+    #embed = discord.Embed(
+    #    title=f"# **{auction['item']}**",
+    #    color=get_embed_color(),
+    #    description=""
+    #)
     embed = discord.Embed(
-        title=f"**{auction['item']}**",
+        title=f"\n",
         color=get_embed_color(),
-        description=""
-    )
-
+        description=f"# **{auction['item']}**"
+    )    
     # Handle description (optional)
 
     description = auction.get("description", "")
@@ -163,7 +167,11 @@ async def build_auction_embed(auction, bot):
             value="\u200b", 
             inline=False
         )
-
+    embed.add_field(
+        name="\u200b", 
+        value="", 
+        inline=False
+    )
     
     embed.add_field(
         name="🏷️ MINIMUM BID", 
